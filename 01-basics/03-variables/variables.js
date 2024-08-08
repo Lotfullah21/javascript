@@ -1,9 +1,9 @@
-// variables
-// we can declare a variable  and assign values later.
-let lastName;
-let name = "lotfullah";
-console.log("Hello", name);
-console.log("Hello", lastName);
+var name, duration, starting_date;
+console.log(name, duration, starting_date); // algorithms 3 months 25th of september
+name = "algorithms";
+duration = "3 months";
+starting_date = "25th of september";
+console.log(name, duration, starting_date);
 
 let country, province, birthPlace;
 country = "Afg";
@@ -11,12 +11,12 @@ province = "Baghlan";
 birthPlace = "Khost";
 
 console.log(
-  "country: ",
-  country,
-  "province: ",
-  province,
-  "birthplace: ",
-  birthPlace
+	"country: ",
+	country,
+	"province: ",
+	province,
+	"birthplace: ",
+	birthPlace
 );
 
 // variables cannot  start with number or keywords

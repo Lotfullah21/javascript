@@ -1,41 +1,44 @@
-There are seven data types in javascript
-
-1. String
-2. Number
-3. Boolean
-4. Null
-5. Undefined
-6. BigInt
-7. Symbol
+# Data Types
 
 Each piece of information has a different value and all values are called data.
+
 But values are different and needs to be stored differently.
 
-## String
+in JavaScript, data types are typically categorized into two main kinds:
 
-Text values are known as string data type.
+## 1. Primitive Data Types
 
-## Number
+Primitive data types are the basic data types that are not objects and have no methods. They are immutable, meaning their values cannot be changed once created. The primitive data types in JavaScript are:
 
-Numerical value are referred as number data type.
+- `Number`: Represents numeric values.
+- `String`: Represents sequences of characters.
+- `Boolean`: Represents a logical entity that can be either true or false.
+- `Undefined`: Represents a variable that has been declared but not yet assigned a value, javascript cannot find the value for this.
+  - Examples: variables without values, missing object properties, missing function arguments.
+- `Null`: Represents the intentional absence of any object value, for instance, the developer sets this value to null.
+- `Symbol`: Represents a unique and immutable value used as object property keys. 2. Non-Primitive Data Types
 
-It is one of the foundational data types that can represent integer and decimal values.
+When declaring numbers in JavaScript, you do not declare the type (whether it be a decimal or an integer); JavaScript will figure that out. You can perform -, \*, / operations on two strings that have numeric values. However, for addition, it would be concatenation.
 
-## Boolean
+## 2. Non-primitive data types:
 
-It has two values, true and false. better for making decisions.
+They are also known as reference types, are objects that can hold collections of values and more complex entities. They are mutable, meaning their content can be changed. The primary non-primitive data types are:
 
-## Null
+### 1. Object:
 
-The null value represents the intentional absence of any object value.
+Represents a collection of key-value pairs, where values can be of any type. Objects can be created using object literals ({}) or using the `new` keyword and a constructor function.
 
-## Undefined
+### 2. Array:
 
-A variable that has been declared but not assigned a value is of type undefined.
+A special type of object that represents an ordered list of values, which can be of any type. Arrays are created using square brackets ([]). For example: [1, 2, 3], ['apple', 'banana', 'orange'].
 
-## BigInt
+### 3. Function:
 
-BigInt is used for numbers that are too large to be represented by the Number data type.
+A type of object that represents a reusable block of code. Functions in JavaScript are first-class objects, meaning they can be assigned to variables, passed as arguments, and returned from other functions.
+
+### 4. Falsy and Truthy
+
+All values except "", ' ', 0, -0, NaN, undefined, false, and null are truthy, meaning they will evaluate to true in a boolean context.
 
 ```js
 let a = 3290n;
@@ -43,6 +46,13 @@ let a = 3290n;
 
 the n suffix in 3290n denotes a BigInt literal. The BigInt type is used for representing and working with large integers that are beyond the range of the standard Number type.
 
-## Symbol
+## Null vs Undefined
 
-A Symbol is a unique and immutable primitive value and may be used as the key of an Object property.
+Null is something that is set by us, but undefined value is something that is set by javascript.
+
+```js
+var num1 = 10;
+console.log(num1 + null); // 10+0 = 10
+var num1 = 10;
+console.log(num1 + undefined); // Nan
+```

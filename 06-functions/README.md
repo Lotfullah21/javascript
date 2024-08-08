@@ -27,6 +27,10 @@ const mod = function (a, b) {
 mod(10, 2); // 0
 ```
 
+## Higher order functions
+
+Accepts another function as an argument or return another function as a result.
+
 ## Callback Functions
 
-a function we pass in as an argument to another function and gets executed inside that function is called callback function.
+A function we pass in as an argument to another function and gets executed inside that function is called callback the function.
